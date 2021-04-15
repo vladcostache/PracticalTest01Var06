@@ -16,13 +16,11 @@ public class ProcessingThread extends Thread {
 
     private Random random = new Random();
 
-    private double arithmeticMean;
-    private double geometricMean;
+    private double scor;
 
-    public ProcessingThread(Context context, int firstNumber, int secondNumber) {
+    public ProcessingThread(Context context, double scor ) {
         this.context = context;
-
-
+        this.scor = scor;
     }
 
     @Override
@@ -42,7 +40,7 @@ public class ProcessingThread extends Thread {
 
     private void sleep() {
         try {
-            Thread.sleep(10000);
+            Thread.sleep(2000);
         } catch (InterruptedException interruptedException) {
             interruptedException.printStackTrace();
         }
