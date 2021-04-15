@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.os.IBinder;
 
 public class PracticalTest01Var06Service extends Service {
-    public PracticalTest01Service() {
+    public PracticalTest01Var06Service() {
     }
 
     @Override

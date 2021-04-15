@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class PracticalTest01Var06SecondaryActivity extends AppCompatActivity {
     private TextView gained;
     private Button ok;
+    int RESULT_SCORE = 0;
 
     private PracticalTest01Var06SecondaryActivity.ButtonClickListener buttonClickListener = new PracticalTest01Var06SecondaryActivity.ButtonClickListener();
     private class ButtonClickListener implements View.OnClickListener {
@@ -19,7 +20,7 @@ public class PracticalTest01Var06SecondaryActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             if(v.getId() == R.id.ok_button) {
-                setResult(RESULT_OK, null); // Aici ar trebui sa fie gained score
+                setResult(RESULT_SCORE, null); // Aici ar trebui sa fie gained score
             }
 
             finish();
@@ -66,5 +67,7 @@ public class PracticalTest01Var06SecondaryActivity extends AppCompatActivity {
 
 
         }
+
+        ok.setOnClickListener(buttonClickListener);
     }
 }

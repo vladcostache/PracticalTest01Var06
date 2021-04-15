@@ -1,5 +1,6 @@
 package ro.pub.cs.systems.eim.practicaltest01var06;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -90,7 +91,21 @@ public class PracticalTest01Var06MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 100) {
-            Toast.makeText(this, "Gai score" + resultCode, Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Gain score" + resultCode, Toast.LENGTH_LONG).show();
+        }
+    }
+
+    protected void onSaveInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putString("SCOR", "2");
+    }
+
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState.containsKey("SCOR")) {
+            Context context = getApplicationContext();
+            String text = savedInstanceState.getString("SCOR");
+            Toast.makeText(context, text, Toast.LENGTH_LONG).show();
         }
     }
 }
