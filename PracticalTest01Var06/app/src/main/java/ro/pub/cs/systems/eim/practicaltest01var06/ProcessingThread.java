@@ -35,6 +35,8 @@ public class ProcessingThread extends Thread {
 
     private void sendMessage() {
         Intent intent = new Intent();
+        intent.putExtra("MESSAGE",
+                new Date(System.currentTimeMillis()) + "VICTORY");
         context.sendBroadcast(intent);
     }
 
