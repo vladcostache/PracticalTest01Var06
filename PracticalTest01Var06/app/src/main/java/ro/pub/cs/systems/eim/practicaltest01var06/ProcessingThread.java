@@ -7,7 +7,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import ro.pub.cs.systems.eim.practicaltest01.general.Constants;
+
 
 public class ProcessingThread extends Thread {
 
@@ -22,7 +22,7 @@ public class ProcessingThread extends Thread {
     public ProcessingThread(Context context, int firstNumber, int secondNumber) {
         this.context = context;
 
- 
+
     }
 
     @Override
