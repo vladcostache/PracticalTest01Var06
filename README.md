@@ -1,1 +1,5 @@
 # PracticalTest01Var06
+
+COSTACHE VLAD-IOAN
+
+342C1
